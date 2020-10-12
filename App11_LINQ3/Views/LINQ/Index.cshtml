@@ -1,0 +1,24 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        bool IsRecipe = item.Trim().Substring(item.Trim().Length - 1) == ":";
+
+
+        if (IsRecipe)
+        {
+            <h4 class="text-primary alert alert-info">@item</h4>
+        }
+        else
+        {
+            <p>@item</p>
+        }
+
+    }
+}

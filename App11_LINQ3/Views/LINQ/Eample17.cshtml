@@ -1,0 +1,15 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "Eample17";
+}
+
+<h1>Eample17</h1>
+
+@if (Model!=null)
+{
+    foreach (var p in Model)
+    {
+        <h5 class="text-danger ">@p</h5>
+    }
+}
+
